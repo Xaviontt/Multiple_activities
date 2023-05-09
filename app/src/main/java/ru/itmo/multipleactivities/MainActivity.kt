@@ -11,11 +11,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val profileButton: Button = findViewById(R.id.profileButton)
+        val usersButton: Button = findViewById(R.id.usersButton)
 
         profileButton.setOnClickListener {
             val intent = Intent(this, MyProfile::class.java)
             startActivity(intent)
         }
-    }
 
+        usersButton.setOnClickListener {
+            val intent = Intent(this, Users::class.java)
+            startActivity(intent)
+        }
+    }
 }
